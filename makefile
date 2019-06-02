@@ -1,11 +1,11 @@
-all: main.o tsp.o
-	g++ -o tsp main.o tsp.o
+all: main.o file.o
+	g++ -o tsp main.o file.o
 
 main.o: main.cpp
 	g++ -c main.cpp
 
-tsp.o: tsp.cpp
-	g++ -c tsp.cpp
+tsp.o: file.cpp
+	g++ -c file.cpp
 
 clean:
-	rm tsp main.o tsp.o
+	rm tsp main.o file.o
