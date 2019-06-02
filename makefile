@@ -4,7 +4,7 @@ all: main.o file.o
 main.o: main.cpp
 	g++ -c main.cpp
 
-tsp.o: file.cpp
+file.o: file.cpp
 	g++ -c file.cpp
 
 clean:
