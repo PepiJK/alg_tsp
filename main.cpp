@@ -59,11 +59,8 @@ int main(int argc, char *argv[])
 				iVisitedPoints[i] = iNumberOfPoints;
 				dTotalLength[i] = 0;
 				sPointSequence[i] = "";
-			}
 
-			// set the distance from one point to himself to 999999 (infinte) to prevent endless loop
-			for (i = 0; i < iNumberOfPoints; i++)
-			{
+				// set the distance from one point to himself to 999999 (infinte) to prevent endless loop
 				for (j = 0; j < iNumberOfPoints; j++)
 				{
 					if (dAdjazenz[i][j] == 0)
@@ -74,7 +71,7 @@ int main(int argc, char *argv[])
 			}
 
 			// algorithm to choose the shortest tour
-			// go trough all starting point always choose shortest distance between points and finally go back to starting point
+			// go through all starting points always choose shortest distance between points and finally go back to starting point
 			for (h = 0; h < iNumberOfPoints; h++)
 			{
 				// reset the visited points
@@ -149,7 +146,7 @@ int main(int argc, char *argv[])
 
 			cout << "Shortest Length: " << dTotalLength[iShortestPointSequenceLengthIndex] << endl;
 			cout << "Sequence: " << sPointSequence[iShortestPointSequenceLengthIndex] << endl;
-			cout << "Time elapsed: " << (clock() - start) * 1000000 / (double)CLOCKS_PER_SEC << "ns" << endl;
+			cout << "Time elapsed: " << (clock() - start) * 1000000 / (double)CLOCKS_PER_SEC << "µs" << endl;
 		}
 		else
 		{
